@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield - Protección</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">⚔️</span>
+                <h1>CyberShield</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="threats.html" class="nav-link">Amenazas</a></li>
+                    <li><a href="protection.html" class="nav-link active">Protección</a></li>
+                    <li><a href="security-lab.html" class="nav-link">Lab</a></li>
+                    <li><a href="contact.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="proteccion" id="proteccion">
+            <div class="container">
+                <h2 class="section-title">Cómo Protegerte</h2>
+                <p class="section-subtitle">Consejos esenciales para mantener tu seguridad digital</p>
+
+                <div class="proteccion-content">
+                    <ul class="consejos-list">
+                        <li class="consejo-item">
+                            <span class="icon-check">✓</span>
+                            <div>
+                                <h4>Usa contraseñas seguras</h4>
+                                <p><strong>Mínimo:</strong> 12 caracteres. <strong>Incluye:</strong> mayúsculas, minúsculas, números, símbolos (!@#$).<br><strong>Evita:</strong> Tu nombre, fecha nacimiento, palabras del diccionario, "123456", "qwerty".<br><strong>Mejor:</strong> Frase aleatoria: "Gato#Azul$Piano2024"<br><strong>Gestores:</strong> Bitwarden, 1Password (guardan contraseñas de forma cifrada).<br><strong>Extra:</strong> Contraseña diferente para cada sitio importante.</p>
+                            </div>
+                        </li>
+                        <li class="consejo-item">
+                            <span class="icon-check">✓</span>
+                            <div>
+                                <h4>Autenticación de dos factores (2FA)</h4>
+                                <p><strong>Qué es:</strong> Segunda verificación además de contraseña.<br><strong>Tipos:</strong> SMS (código por texto), Authenticator (Google Authenticator, Authy), Biometría (huella dactilar), Seguridad física (USB YubiKey).<br><strong>Dónde activar:</strong> Email, redes sociales, banca, iCloud/Google Drive.<br><strong>Ventaja:</strong> Aunque roben tu contraseña, sin 2FA no acceden a tu cuenta.</p>
+                            </div>
+                        </li>
+                        <li class="consejo-item">
+                            <span class="icon-check">✓</span>
+                            <div>
+                                <h4>Navega seguro</h4>
+                                <p><strong>Cuidado con:</strong> URLs desconocidas, dominios falsos ("banco-seguro.com"), archivos .exe de fuentes raras.<br><strong>Mejor:</strong> Escribe URL directamente, no hagas clic en links sospechosos.<br><strong>Navegadores seguros:</strong> Chrome, Firefox, Edge advierten sitios maliciosos.<br><strong>Extensión:</strong> uBlock Origin (bloquea malware).</p>
+                            </div>
+                        </li>
+                        <li class="consejo-item">
+                            <span class="icon-check">✓</span>
+                            <div>
+                                <h4>Mantén software actualizado</h4>
+                                <p><strong>Por qué:</strong> Actualizaciones cierran agujeros de seguridad.<br><strong>Actualiza:</strong> SO, navegador, antivirus, apps.<br><strong>Cómo:</strong> Habilita auto-actualizaciones.<br><strong>Ejemplo:</strong> WannaCry 2017 paralizó 150,000 PCs por falta de actualización.</p>
+                            </div>
+                        </li>
+                        <li class="consejo-item">
+                            <span class="icon-check">✓</span>
+                            <div>
+                                <h4>Identidad digital y certificados</h4>
+                                <p><strong>No compartir:</strong> Número ID, contraseñas, PIN, datos tarjeta.<br><strong>En redes:</strong> No publiques ubicación o datos personales; limita privacidad.<br><strong>HTTPS:</strong> URL con "https://" = conexión cifrada. Candado verde = seguro.<br><strong>Email seguro:</strong> Protege bien tu email; es llave de acceso a todo.</p>
+                            </div>
+                        </li>
+                        <li class="consejo-item">
+                            <span class="icon-check">✓</span>
+                            <div>
+                                <h4>Software legal: licencias</h4>
+                                <p><strong>Freeware:</strong> Gratis, no código disponible.<br><strong>Open Source:</strong> Gratis, código visible; VLC, Firefox.<br><strong>GNU/GPL:</strong> Código abierto; cambios deben compartirse.<br><strong>Creative Commons:</strong> Imágenes/música; cita al autor.<br><strong>Riesgo P2P:</strong> BitTorrent puede traer malware; usa sitios oficiales.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SECURITY CHECKLIST -->
+        <section class="security-checklist" id="security-checklist">
+            <div class="container">
+                <h2 class="section-title">Lista de Verificación de Seguridad</h2>
+                <p class="section-subtitle">Evalúa tus hábitos de seguridad digital</p>
+                
+                <div class="checklist-card">
+                    <div class="checklist-header">
+                        <h3 class="checklist-title">🛡️ Evalúa tu Nivel de Seguridad</h3>
+                        <div class="security-level">
+                            <div class="level-bar">
+                                <div id="levelFill" class="level-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="level-text">
+                                <span id="levelPercentage">0%</span>
+                                <span id="levelLabel">Principiante</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="security-checkbox" data-points="15">
+                                <span class="checkmark"></span>
+                                <span class="item-text">Uso contraseñas fuertes (12+ caracteres, mezcla de tipos)</span>
+                            </label>
+                        </div>
+                        <div class="checklist-item">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="security-checkbox" data-points="20">
+                                <span class="checkmark"></span>
+                                <span class="item-text">Activo autenticación de dos factores (2FA)</span>
+                            </label>
+                        </div>
+                        <div class="checklist-item">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="security-checkbox" data-points="15">
+                                <span class="checkmark"></span>
+                                <span class="item-text">Evito hacer clic en enlaces sospechosos</span>
+                            </label>
+                        </div>
+                        <div class="checklist-item">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="security-checkbox" data-points="10">
+                                <span class="checkmark"></span>
+                                <span class="item-text">Actualizo mi software y sistema operativo regularmente</span>
+                            </label>
+                        </div>
+                        <div class="checklist-item">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="security-checkbox" data-points="15">
+                                <span class="checkmark"></span>
+                                <span class="item-text">Uso antivirus/antimalware actualizado</span>
+                            </label>
+                        </div>
+                        <div class="checklist-item">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="security-checkbox" data-points="10">
+                                <span class="checkmark"></span>
+                                <span class="item-text">Hago copias de seguridad de mis datos importantes</span>
+                            </label>
+                        </div>
+                        <div class="checklist-item">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="security-checkbox" data-points="10">
+                                <span class="checkmark"></span>
+                                <span class="item-text">No comparto información sensible en redes sociales</span>
+                            </label>
+                        </div>
+                        <div class="checklist-item">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="security-checkbox" data-points="5">
+                                <span class="checkmark"></span>
+                                <span class="item-text">Verifico la URL antes de ingresar credenciales</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-footer">
+                        <div class="level-description">
+                            <p id="levelDescription" class="level-desc">Marca los elementos que aplican a tus hábitos de seguridad para ver tu nivel.</p>
+                        </div>
+                        <button id="resetChecklist" class="btn btn-secondary reset-btn">Reiniciar Lista</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 CyberShield - Seguridad Digital</p>
+            <p class="footer-tagline">Juntos construimos un internet más seguro</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield - Laboratorio de Seguridad</title>
+    <!-- Importar fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Enlazar CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">⚔️</span>
+                <h1>CyberShield</h1>
+            </div>
+            <!-- Menú de navegación -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="threats.html" class="nav-link">Amenazas</a></li>
+                    <li><a href="protection.html" class="nav-link">Protección</a></li>
+                    <li><a href="security-lab.html" class="nav-link active">Lab</a></li>
+                    <li><a href="contact.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN HERO DEL LAB -->
+        <section class="lab-hero" id="lab-inicio">
+            <div class="container">
+                <h2 class="section-title">Laboratorio de Seguridad</h2>
+                <p class="section-subtitle">Prueba herramientas básicas de ciberseguridad y aprende a proteger tu identidad digital</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PASSWORD STRENGTH CHECKER -->
+        <section class="security-tool" id="password-checker">
+            <div class="container">
+                <div class="tool-card">
+                    <h3 class="tool-title">🔐 Verificador de Contraseña</h3>
+                    <p class="tool-description">Ingresa una contraseña para evaluar su fortaleza. Recuerda que tus datos no se guardan en nuestros servidores.</p>
+                    
+                    <div class="password-input-wrapper">
+                        <label for="passwordInput" class="input-label">Tu Contraseña:</label>
+                        <input 
+                            type="password" 
+                            id="passwordInput" 
+                            placeholder="Ingresa tu contraseña aquí..." 
+                            class="password-input"
+                            autocomplete="off"
+                        >
+                        <button id="togglePassword" class="toggle-password-btn" title="Mostrar/Ocultar contraseña">👁️</button>
+                    </div>
+
+                    <!-- Strength Meter -->
+                    <div class="strength-container">
+                        <div class="strength-bar">
+                            <div class="strength-fill" id="strengthFill"></div>
+                        </div>
+                        <p class="strength-text" id="strengthText">Escribe una contraseña para ver su fortaleza</p>
+                    </div>
+
+                    <!-- Criteria Checklist -->
+                    <div class="criteria-container">
+                        <h4>Criterios de Fortaleza:</h4>
+                        <ul class="criteria-list">
+                            <li class="criterion" id="criterion-length">
+                                <span class="criterion-icon">○</span>
+                                <span class="criterion-label">Al menos 12 caracteres</span>
+                            </li>
+                            <li class="criterion" id="criterion-uppercase">
+                                <span class="criterion-icon">○</span>
+                                <span class="criterion-label">Letras mayúsculas (A-Z)</span>
+                            </li>
+                            <li class="criterion" id="criterion-lowercase">
+                                <span class="criterion-icon">○</span>
+                                <span class="criterion-label">Letras minúsculas (a-z)</span>
+                            </li>
+                            <li class="criterion" id="criterion-numbers">
+                                <span class="criterion-icon">○</span>
+                                <span class="criterion-label">Números (0-9)</span>
+                            </li>
+                            <li class="criterion" id="criterion-special">
+                                <span class="criterion-icon">○</span>
+                                <span class="criterion-label">Caracteres especiales (!@#$%)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PASSWORD GENERATOR -->
+        <section class="security-tool" id="password-generator">
+            <div class="container">
+                <div class="tool-card">
+                    <h3 class="tool-title">🔑 Generador de Contraseñas Seguras</h3>
+                    <p class="tool-description">Genera contraseñas aleatorias y seguras que incluyen mayúsculas, minúsculas, números y símbolos.</p>
+                    
+                    <div class="generator-controls">
+                        <div class="length-selector">
+                            <label for="passwordLength" class="input-label">Longitud:</label>
+                            <input type="range" id="passwordLength" min="8" max="32" value="16" class="length-slider">
+                            <span id="lengthValue" class="length-display">16</span>
+                        </div>
+                        
+                        <div class="generator-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="includeUppercase" checked>
+                                <span class="checkmark"></span>
+                                Mayúsculas (A-Z)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="includeLowercase" checked>
+                                <span class="checkmark"></span>
+                                Minúsculas (a-z)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="includeNumbers" checked>
+                                <span class="checkmark"></span>
+                                Números (0-9)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="includeSymbols" checked>
+                                <span class="checkmark"></span>
+                                Símbolos (!@#$%)
+                            </label>
+                        </div>
+                        
+                        <button id="generatePassword" class="btn btn-primary generate-btn">Generar Contraseña Segura</button>
+                    </div>
+                    
+                    <div class="generated-password-wrapper">
+                        <label for="generatedPassword" class="input-label">Contraseña Generada:</label>
+                        <div class="password-output-container">
+                            <input type="text" id="generatedPassword" readonly class="generated-password-input" placeholder="Haz clic en 'Generar' para crear una contraseña segura">
+                            <button id="copyPassword" class="copy-btn" title="Copiar contraseña">📋</button>
+                        </div>
+                        <div id="copyFeedback" class="copy-feedback">¡Contraseña copiada!</div>
+                    </div>
+                    
+                    <div class="generator-tip">
+                        <p><strong>💡 Tip:</strong> Usa contraseñas de al menos 12 caracteres con una mezcla de tipos de caracteres para máxima seguridad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PASSWORD TIPS -->
+        <section class="security-tips" id="password-tips">
+            <div class="container">
+                <h3 class="section-title">Consejos de Seguridad en Contraseñas</h3>
+                <p class="section-subtitle">Prácticas recomendadas para mantener tus contraseñas seguras</p>
+                
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">📏</div>
+                        <h4>Longitud Suficiente</h4>
+                        <p>Usa al menos 12 caracteres. Las contraseñas largas son exponencialmente más difíciles de romper que las cortas.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🔤</div>
+                        <h4>Mezcla de Caracteres</h4>
+                        <p>Combina mayúsculas, minúsculas, números y símbolos especiales. Esto aumenta la complejidad exponencialmente.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🚫</div>
+                        <h4>Evita Información Personal</h4>
+                        <p>No uses tu nombre, fecha de nacimiento, teléfono o nombres de familiares. Los atacantes los conocen fácilmente.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🔑</div>
+                        <h4>Contraseña Única por Cuenta</h4>
+                        <p>Usa diferentes contraseñas para cada servicio. Si una se ve comprometida, las otras permanecen seguras.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">💾</div>
+                        <h4>Gestor de Contraseñas</h4>
+                        <p>Utiliza un gestor como Bitwarden, LastPass o 1Password. Te ayuda a crear y almacenar contraseñas complejas.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🔄</div>
+                        <h4>Actualización Regular</h4>
+                        <p>Cambia tu contraseña regularmente, especialmente si sospechas que ha sido comprometida.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CYBERSECURITY QUIZ -->
+        <section class="security-quiz" id="cyber-quiz">
+            <div class="container">
+                <h2 class="section-title">Quiz de Ciberseguridad</h2>
+                <p class="section-subtitle">Pon a prueba tus conocimientos sobre seguridad digital</p>
+                
+                <div class="quiz-card">
+                    <div class="quiz-header">
+                        <div class="quiz-progress">
+                            <span id="currentQuestion">1</span> / <span id="totalQuestions">3</span>
+                        </div>
+                        <div class="quiz-score">
+                            Puntaje: <span id="score">0</span>/<span id="maxScore">3</span>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-content">
+                        <div id="question-container" class="question-container">
+                            <h3 id="question-text" class="question-text">¿Qué es el phishing?</h3>
+                            <div class="options-container">
+                                <button class="option-btn" data-option="A">A) Un tipo de firewall</button>
+                                <button class="option-btn" data-option="B">B) Un intento malicioso de robar información personal</button>
+                                <button class="option-btn" data-option="C">C) Un tipo de antivirus</button>
+                            </div>
+                        </div>
+                        
+                        <div id="result-container" class="result-container hidden">
+                            <div class="result-feedback">
+                                <div id="result-icon" class="result-icon">✅</div>
+                                <h4 id="result-title" class="result-title">¡Correcto!</h4>
+                                <p id="result-explanation" class="result-explanation">El phishing es un ataque donde los ciberdelincuentes intentan obtener información sensible haciéndose pasar por entidades confiables.</p>
+                            </div>
+                            <button id="nextQuestionBtn" class="btn btn-primary next-btn">Siguiente Pregunta</button>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-footer">
+                        <button id="restartQuiz" class="btn btn-secondary restart-btn">Reiniciar Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN INFORMACIÓN ADICIONAL -->
+        <section class="lab-info" id="lab-info">
+            <div class="container">
+                <div class="info-box">
+                    <h3>💡 Información sobre este Laboratorio</h3>
+                    <p>Este Password Strength Checker funciona <strong>completamente en tu navegador</strong>. Tu contraseña:</p>
+                    <ul>
+                        <li>✓ No se envía a nuestros servidores</li>
+                        <li>✓ No se almacena ni guarda</li>
+                        <li>✓ Se analiza localmente usando JavaScript</li>
+                        <li>✓ Se elimina cuando cierres la página</li>
+                    </ul>
+                    <p style="margin-top: 1.5rem;"><strong>Es solo una herramienta educativa</strong> para que comprendas qué hace que una contraseña sea fuerte. Úsala para mejorar tus prácticas de seguridad.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <p>&copy; 2026 CyberShield - Seguridad Digital</p>
+            <p class="footer-tagline">Juntos construimos un internet más seguro</p>
+        </div>
+    </footer>
+
+    <!-- Enlazar JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

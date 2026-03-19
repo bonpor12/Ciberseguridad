@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield - Seguridad Digital</title>
+    <!-- Importar fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Enlazar CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-container">
+            <div class="loading-header">
+                <h1 class="loading-title">CyberShield System</h1>
+                <div class="loading-subtitle">Initializing Security Protocols...</div>
+            </div>
+            <div class="loading-console">
+                <div id="loading-text" class="loading-text"></div>
+                <div class="loading-cursor">█</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTRO SCREEN -->
+    <div id="intro-screen" class="intro-screen">
+        <div class="intro-container">
+            <h1>Bienvenido a CyberShield</h1>
+            <p>Aprende lo básico sobre ciberseguridad y navega con seguridad.</p>
+            <button id="intro-btn" class="btn btn-primary">Comenzar</button>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">⚔️</span>
+                <h1>CyberShield</h1>
+            </div>
+            <!-- Menú de navegación -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="threats.html" class="nav-link">Amenazas</a></li>
+                    <li><a href="protection.html" class="nav-link">Protección</a></li>
+                    <li><a href="security-lab.html" class="nav-link">Lab</a></li>
+                    <li><a href="contact.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN HERO -->
+        <section class="hero" id="inicio">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Cybersecurity</h2>
+                    <p class="hero-subtitle">Protege tu mundo digital. El primer paso es aprender a identificar amenazas y defenderte.</p>
+                    <blockquote class="hero-quote">
+                        "En un mundo digital, la seguridad es la nueva armadura."
+                    </blockquote>
+                    <a href="threats.html" class="btn btn-primary" id="learn-btn">Explore Threats</a>
+                </div>
+                <!-- Decoración visual hacker -->
+                <div class="hero-decoration">
+                    <div class="matrix"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN INTRODUCTION -->
+        <section class="introduction hidden" id="introduction">
+            <div class="container">
+                <h2 class="section-title">¿Qué es la ciberseguridad?</h2>
+                <p class="section-subtitle">Medidas y tecnologías para proteger tu información en línea</p>
+                
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="overview-icon">🛡️</div>
+                        <h3>Definición</h3>
+                        <p>Conjunto de medidas y tecnologías para proteger computadoras, redes e información contra accesos no autorizados y robo de datos.</p>
+                    </div>
+                    <div class="overview-card">
+                        <div class="overview-icon">⚡</div>
+                        <h3>Seguridad Activa</h3>
+                        <p>Prevenir ataques antes de que ocurran. Antivirus, firewalls, contraseñas fuertes y actualizaciones de software.</p>
+                    </div>
+                    <div class="overview-card">
+                        <div class="overview-icon">🔄</div>
+                        <h3>Seguridad Pasiva</h3>
+                        <p>Minimizar daños después de un ataque. Copias de seguridad, recuperación de datos y planes de respuesta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN WHY CYBERSECURITY MATTERS -->
+        <section class="why-cybersecurity" id="why-cybersecurity">
+            <div class="container">
+                <h2 class="section-title">¿Por Qué Importa la Ciberseguridad?</h2>
+                <p class="section-subtitle">La ciberseguridad es el conjunto de prácticas y tecnologías diseñadas para proteger sistemas, redes y datos frente a ataques digitales, asegurando la privacidad, la integridad y la disponibilidad de la información.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🎣</div>
+                        <div class="stat-content">
+                            <h3 class="stat-title">90% de Ataques</h3>
+                            <p class="stat-description">Comienzan con phishing. Los emails fraudulentos son la puerta de entrada más común para los ciberdelincuentes.</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🔑</div>
+                        <div class="stat-content">
+                            <h3 class="stat-title">Contraseñas Débiles</h3>
+                            <p class="stat-description">Son responsables del 80% de las brechas de datos. Una contraseña fuerte es tu primera línea de defensa.</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌐</div>
+                        <div class="stat-content">
+                            <h3 class="stat-title">Millones de Ataques</h3>
+                            <p class="stat-description">Ocurren diariamente en todo el mundo. Cada 39 segundos se produce un intento de ciberataque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN ESTADÍSTICAS CLAVE -->
+        <section class="stats" id="stats">
+            <div class="container">
+                <div class="stat-highlight">
+                    <p class="stat-label">En 2024</p>
+                    <p class="stat-number">+40%</p>
+                    <p class="stat-description">Aumento de ciberataques a nivel global</p>
+                    <p class="stat-note">Tú eres el primer defensor de tu seguridad digital</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SECURITY SCAN SIMULATION -->
+        <section class="security-scan" id="security-scan">
+            <div class="container">
+                <h2 class="section-title">Escaneo de Seguridad</h2>
+                <p class="section-subtitle">Simula un análisis de seguridad básico de tu sistema</p>
+                
+                <div class="scan-card">
+                    <div class="scan-header">
+                        <h3 class="scan-title">🔍 Escáner de Seguridad CyberShield</h3>
+                        <p class="scan-description">Esta simulación demuestra cómo funciona un escaneo de seguridad básico.</p>
+                    </div>
+                    
+                    <div class="scan-controls">
+                        <button id="runScanBtn" class="btn btn-primary scan-btn">Ejecutar Escaneo de Seguridad</button>
+                        <div class="scan-status">
+                            <span id="scanStatus" class="status-text">Listo para escanear</span>
+                        </div>
+                    </div>
+                    
+                    <div class="scan-console">
+                        <div class="console-header">
+                            <span class="console-title">CyberShield Security Console</span>
+                            <span class="console-status">● Sistema Seguro</span>
+                        </div>
+                        <div id="consoleOutput" class="console-output">
+                            <div class="console-line">CyberShield Security Scanner v2.0</div>
+                            <div class="console-line">Listo para iniciar análisis...</div>
+                        </div>
+                    </div>
+                    
+                    <div id="scanResults" class="scan-results hidden">
+                        <div class="results-header">
+                            <h4>📊 Resultados del Escaneo</h4>
+                        </div>
+                        <div class="results-list">
+                            <div class="result-item success">
+                                <span class="result-icon">✅</span>
+                                <span class="result-text">Firewall activo y configurado correctamente</span>
+                            </div>
+                            <div class="result-item success">
+                                <span class="result-icon">✅</span>
+                                <span class="result-text">Sistema operativo actualizado</span>
+                            </div>
+                            <div class="result-item success">
+                                <span class="result-icon">✅</span>
+                                <span class="result-text">Antivirus funcionando correctamente</span>
+                            </div>
+                            <div class="result-item success">
+                                <span class="result-icon">✅</span>
+                                <span class="result-text">No se detectaron vulnerabilidades conocidas</span>
+                            </div>
+                            <div class="result-item info">
+                                <span class="result-icon">ℹ️</span>
+                                <span class="result-text">Recomendado: Habilitar autenticación de dos factores</span>
+                            </div>
+                        </div>
+                        <div class="scan-summary">
+                            <div class="summary-text">
+                                <strong>Estado General:</strong> <span class="status-good">Sistema Seguro</span>
+                            </div>
+                            <div class="summary-text">
+                                <strong>Amenazas Detectadas:</strong> <span class="threat-count">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PREVIEW DE AMENAZAS -->
+        <section class="threats-preview" id="threats-preview">
+            <div class="container">
+                <h2 class="section-title">Principales Amenazas</h2>
+                <p class="section-subtitle">Conoce los peligros más comunes en internet</p>
+                
+                <div class="threats-grid">
+                    <div class="threat-card-small">
+                        <div class="threat-icon">🎣</div>
+                        <h3>Phishing</h3>
+                        <p>Engaño mediante correos o sitios falsos para robar credenciales y datos bancarios.</p>
+                    </div>
+                    <div class="threat-card-small">
+                        <div class="threat-icon">🦠</div>
+                        <h3>Malware</h3>
+                        <p>Software malicioso que daña tu sistema: virus, gusanos, spyware y troyanos.</p>
+                    </div>
+                    <div class="threat-card-small">
+                        <div class="threat-icon">🔒</div>
+                        <h3>Ransomware</h3>
+                        <p>Malware que encripta tus archivos y exige dinero para recuperarlos.</p>
+                    </div>
+                    <div class="threat-card-small">
+                        <div class="threat-icon">⚡</div>
+                        <h3>Ataques de Fuerza Bruta</h3>
+                        <p>Programas que prueban millones de combinaciones de contraseña automáticamente.</p>
+                    </div>
+                </div>
+                
+                <div class="section-cta">
+                    <a href="threats.html" class="btn btn-primary">Ver Todas las Amenazas</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PREVIEW DE PROTECCIÓN -->
+        <section class="protection-preview" id="protection-preview">
+            <div class="container">
+                <h2 class="section-title">Cómo Protegerte</h2>
+                <p class="section-subtitle">Estrategias esenciales para tu seguridad digital</p>
+                
+                <div class="protection-grid">
+                    <div class="protection-card-small">
+                        <div class="protection-num">01</div>
+                        <h3>Contraseñas Fuertes</h3>
+                        <p>Usa combinaciones de 12+ caracteres, números, mayúsculas y símbolos. Activa autenticación de dos factores.</p>
+                    </div>
+                    <div class="protection-card-small">
+                        <div class="protection-num">02</div>
+                        <h3>Mantén tu Software Actualizado</h3>
+                        <p>Las actualizaciones incluyen parches de seguridad. No ignores las notificaciones de actualizaciones.</p>
+                    </div>
+                    <div class="protection-card-small">
+                        <div class="protection-num">03</div>
+                        <h3>Copias de Seguridad Regulares</h3>
+                        <p>Guarda tus datos en múltiples lugares. Así estarás protegido incluso si sufres un ataque.</p>
+                    </div>
+                </div>
+                
+                <div class="section-cta">
+                    <a href="protection.html" class="btn btn-primary">Descubre Más Estrategias</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="final-cta" id="final-cta">
+            <div class="container">
+                <h2>¿Listo para protegerte?</h2>
+                <p>Explora nuestro contenido sobre amenazas y protección, o contacta con nosotros para más información.</p>
+                <div class="cta-buttons">
+                    <a href="threats.html" class="btn btn-primary">Explorar Amenazas</a>
+                    <a href="contact.html" class="btn btn-secondary">Contactar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <p>&copy; 2026 CyberShield - Seguridad Digital</p>
+            <p class="footer-tagline">Juntos construimos un internet más seguro</p>
+        </div>
+    </footer>
+
+    <!-- Enlazar JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
